@@ -37,4 +37,4 @@ final class Database
         return self::$pdo;
     }
 }
-// test
+?>
