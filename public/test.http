@@ -1,0 +1,16 @@
+POST http://localhost:8000/auth/login
+
+ { "email":"admin@books.test", "password":"password" }
+
+### As admin
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{ "email": "admin@books.test", "password": "password" }
+
+####
+POST http://localhost:8000/api/books
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJib29rcy1hcGkiLCJzdWIiOjEsImlhdCI6MTc4MjE1MDA3OCwiZXhwIjoxNzgyMTUzNjc4LCJyb2xlIjoiYWRtaW4iLCJlbWFpbCI6ImFkbWluQGJvb2tzLnRlc3QifQ.-ed4-7q3xKg-Y002RpxyQrCDiG8lPKST4KsY5nsLHZU
+Content-Type: application/json
+
+{ "title":"Future Book", "author":"X", "year": 2009 }
