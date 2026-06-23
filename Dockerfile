@@ -1,7 +1,10 @@
 FROM php:8.2-apache
 
-# Enable Apache mod_rewrite
+# Enable mod_rewrite
 RUN a2enmod rewrite
+
+# Install PDO MySQL extension
+RUN docker-php-ext-install pdo pdo_mysql
 
 # Set document root to /public
 ENV APACHE_DOCUMENT_ROOT /var/www/html/public
